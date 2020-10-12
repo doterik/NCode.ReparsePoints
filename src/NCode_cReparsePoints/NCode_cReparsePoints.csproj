@@ -33,10 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Management.Automation.6.1.7601.17515\lib\net45\System.Management.Automation.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ensure.cs" />
@@ -48,13 +44,17 @@
   <ItemGroup>
     <None Include="cReparsePoints.psd1" />
     <None Include="NCode_cReparsePoints.schema.mof" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NCode.ReparsePoints\NCode.ReparsePoints.csproj">
       <Project>{BDED1F51-EC0C-48B9-85EA-88CDCB094139}</Project>
       <Name>NCode.ReparsePoints</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Management.Automation">
+      <Version>6.1.7601.17515</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
